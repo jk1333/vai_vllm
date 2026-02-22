@@ -101,7 +101,7 @@ echo -e "\n✅ 데이터 소스 추가 완료!"
 if [ -f "$DASHBOARD_FILE" ]; then
   echo "🚀 [$DASHBOARD_FILE] 파일을 사용하여 대시보드를 생성합니다..."
   
-  jq '{dashboard: ., overwrite: true}' "$DASHBOARD_FILE" > payload.json
+  jq '{dashboard: (. | .id = null), overwrite: true, folderId: 0}' "$DASHBOARD_FILE" > payload.json
   
   curl -s -X POST "${GRAFANA_API_URL}/api/dashboards/db" \
     -H "Content-Type: application/json" \
