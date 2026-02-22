@@ -1488,8 +1488,8 @@
       {
         "current": {
           "selected": false,
-          "text": "/share/datasets/public_models/Meta-Llama-3-8B-Instruct",
-          "value": "/share/datasets/public_models/Meta-Llama-3-8B-Instruct"
+          "text": "mistralai/Mistral-7B-v0.1",
+          "value": "mistralai/Mistral-7B-v0.1"
         },
         "datasource": {
           "type": "prometheus",
